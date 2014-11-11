@@ -2,16 +2,16 @@
 <openerp>
 <data>
 
-<record id="portal_only_menu" model="website.menu">
+<record id="portal_only_menu" model="website.menu" groups="base.group_portal">
 	<field name="name">Portal User's Page</field>
 	<field name="url">/page/portal-users-page</field>
 	<field name="parent_id" ref="website.main_menu"/>
 	<field name="sequence" type="int">20</field>
 </record>    
     
-<template id="website.portal-users-page" name="Portal User's Page" page="True">
+<template id="website.portal-users-page" name="Portal User's Page" page="True" groups="base.group_portal">
   <t t-call="website.layout">
-    <div t-if="user_id.groups_id.name == 'Portal'" id="wrap" class="oe_structure oe_empty">
+    <div id="wrap" class="oe_structure oe_empty">
       <section class="jumbotron mt0 mb0">
         <div class="container">
           <h1>Portal-Only Page</h1>
