@@ -12,7 +12,7 @@
     
 <template id="website.portal-users-page" name="Portal User's Page" page="True">
   <t t-call="website.layout">
-    <div t-if="groups_id.name == 'Portal'" id="wrap" class="oe_structure oe_empty">
+    <div t-if="user_id.groups_id.name == 'Portal'" id="wrap" class="oe_structure oe_empty">
       <section class="jumbotron mt0 mb0">
         <div class="container">
           <h1>Portal-Only Page</h1>
