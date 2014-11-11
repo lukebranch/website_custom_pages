@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="employee_only_menu" model="website.menu">
+	<field name="name">Employee's Page</field>
+	<field name="url">/page/employee-only-pages</field>
+	<field name="parent_id" ref="website.main_menu"/>
+	<field name="sequence" type="int">20</field>
+	<field name="groups_id" eval="[(4,  ref('base.group_portal'))]"/>
+</record>    
+    
+<template id="website.portal-users-page" name="Employee's Page" page="True">
+  <t t-if="groups_id.name == 'Employee'" t-call="website.layout">
+    <div id="wrap" class="oe_structure oe_empty">
+      <section class="jumbotron mt0 mb0">
+        <div class="container">
+          <h1>Employee-Only Page</h1>
+          <p>This page is restricted to Employee group members only.</p>
+          <p>
+            <a class="btn btn-primary btn-lg" href="/page/website.contactus">Contact us </a>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <h2 class="page-header">How can I create a page to be shown only to logged in employee's?</h2>
+          <h3>How can I sign in to your website?</h3>
+          <p> only sells directly to authorised resellers and distributors. In order to sign in to our website you must first apply for a distributor account with us. Once your distributor application has been approved we will provide you with login credentials for your account and you can use the online quotation facility of this website.</p>
+          <h3>How can I create an account?</h3>
+          <p>To create an account on this website you must complete a distributor application and provide all details in full to our sales staff. Once we receive your application and it has been processed and approved we will contact you to provide you with login credentials so that you can purchase through our online quotation system. Please contact us for more information.</p>
+          <p/>
+        </div>
+      </section>
+    </div>
+  </t>      
+</template>
+
+</data>
+</openerp>
