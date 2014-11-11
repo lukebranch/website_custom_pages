@@ -7,7 +7,7 @@
 	<field name="url">/page/portal-users-page</field>
 	<field name="parent_id" ref="website.main_menu"/>
 	<field name="sequence" type="int">20</field>
-	<field name="groups_id" eval="[(4,  ref('base.group_portal'))]"/>
+	<field name="groups" eval="[(4, ref('base.group_portal'))]"/>
 </record>    
     
 <template id="website.portal-users-page" name="Portal User's Page" page="True">
