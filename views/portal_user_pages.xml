@@ -9,8 +9,8 @@
 	<field name="sequence" type="int">20</field>
 </record>    
     
-<template id="website.portal-users-page" name="Portal User's Page" page="True" groups="base.group_portal">
-  <t t-call="website.layout">
+<template id="website.portal-users-page" name="Portal User's Page" page="True">
+  <t groups="base.group_portal" t-call="website.layout">
     <div id="wrap" class="oe_structure oe_empty">
       <section class="jumbotron mt0 mb0">
         <div class="container">
