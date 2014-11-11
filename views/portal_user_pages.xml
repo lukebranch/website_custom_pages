@@ -7,7 +7,7 @@
 	<field name="url">/page/portal-users-page</field>
 	<field name="parent_id" ref="website.main_menu"/>
 	<field name="sequence" type="int">20</field>
-	<field name="domain_force">[('field','operator','value'),('groups_id.name','=','Portal')]</field>
+	<field name="domain_force">[('field','operator','value'),('user_id.groups_id.name','=','Public')]</field>
         <field name="perm_read" eval="False"/>
         <field name="perm_write" eval="False"/>
         <field name="perm_unlink" eval="False"/>
