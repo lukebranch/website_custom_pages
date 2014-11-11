@@ -2,20 +2,21 @@
 <openerp>
 <data>
 
-<record id="faq_menu" model="website.menu">
-	<field name="name">FAQ's</field>
-	<field name="url">/page/frequently-asked-questions</field>
+<record id="portal_only_menu" model="website.menu">
+	<field name="name">Portal User's Page</field>
+	<field name="url">/page/portal-users-page</field>
 	<field name="parent_id" ref="website.main_menu"/>
 	<field name="sequence" type="int">20</field>
+	<field name="groups_id" eval="[(4,  ref('base.group_portal'))]"/>
 </record>    
     
-<template id="website.frequently-asked-questions" name="FAQ's" page="True">
-  <t t-call="website.layout">
+<template id="website.portal-users-page" name="Portal User's Page" page="True">
+  <t t-if="groups_id.name == 'Portal'" t-call="website.layout">
     <div id="wrap" class="oe_structure oe_empty">
       <section class="jumbotron mt0 mb0">
         <div class="container">
-          <h1>Frequently Asked Questions.</h1>
-          <p>Find answers to your questions here. If you can't find an answer here please contact us.</p>
+          <h1>Portal-Only Page</h1>
+          <p>This page is restricted to Portal group members only.</p>
           <p>
             <a class="btn btn-primary btn-lg" href="/page/website.contactus">Contact us </a>
           </p>
@@ -23,7 +24,7 @@
       </section>
       <section>
         <div class="container">
-          <h2 class="page-header">How can I purchase your products?</h2>
+          <h2 class="page-header">How can I create a page to be shown only to logged in portal users?</h2>
           <h3>How can I sign in to your website?</h3>
           <p> only sells directly to authorised resellers and distributors. In order to sign in to our website you must first apply for a distributor account with us. Once your distributor application has been approved we will provide you with login credentials for your account and you can use the online quotation facility of this website.</p>
           <h3>How can I create an account?</h3>
