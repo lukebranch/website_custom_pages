@@ -3,7 +3,7 @@
 <data>
 
 <record id="portal_only_menu" model="website.menu">
-	<field name="name">Portal User's Page</field>
+	<field groups="base.group_portal" name="name">Portal User's Page</field>
 	<field name="url">/page/portal-users-page</field>
 	<field name="parent_id" ref="website.main_menu"/>
 	<field name="sequence" type="int">20</field>
