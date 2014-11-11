@@ -7,7 +7,6 @@
     'depends': ['website', 'portal'],
     'data': [
         'views/portal_user_pages.xml',
-        'views/employee_user_pages.xml',
     ],
     'application': True,
 }
