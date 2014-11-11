@@ -3,10 +3,10 @@
 <data>
 
 <record id="portal_only_menu" model="website.menu">
-	<field name="name">Portal User's Page</field>
-	<field name="url">/page/portal-users-page</field>
-	<field name="parent_id" ref="website.main_menu"/>
-	<field name="sequence" type="int">20</field>
+	<field groups="base.group_portal" name="name">Portal User's Page</field>
+	<field groups="base.group_portal" name="url">/page/portal-users-page</field>
+	<field groups="base.group_portal" name="parent_id" ref="website.main_menu"/>
+	<field groups="base.group_portal" name="sequence" type="int">20</field>
 </record>    
     
 <template id="website.portal-users-page" name="Portal User's Page" page="True">
