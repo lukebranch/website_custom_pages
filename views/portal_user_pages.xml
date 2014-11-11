@@ -2,7 +2,7 @@
 <openerp>
 <data>
 
-<record id="portal_only_menu" model="website.menu">
+<record id="portal_only_menu" model="website.menu" groups="[(4, ref('base.group_portal'))]">
 	<field name="name">Portal User's Page</field>
 	<field name="url">/page/portal-users-page</field>
 	<field name="parent_id" ref="website.main_menu"/>
