@@ -1,12 +1,13 @@
 {
-    'name': 'Website Custom Pages',
+    'name': 'Website Restricted Pages',
     'description': 'This module demonstrates a method for adding a page to an Odoo website using a custom module.',
     'category': 'Website',
     'version': '1.0',
     'author': 'Luke Branch',
-    'depends': ['website'],
+    'depends': ['website', 'portal'],
     'data': [
-        'views/pages.xml',
+        'views/portal_user_pages.xml',
+        'views/employee_user_pages.xml',
     ],
     'application': True,
 }
